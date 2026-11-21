@@ -12,7 +12,7 @@ class ZGServiceDelegate extends ServiceDelegate {
 	
     function onTemporalEvent() {
         wasTemporal = true;
-  		jData = "Monday";
+  		jData = "Tuesday";
 
 		Application.Storage.setValue(jDataKey,jData);
         Background.exit(jData);

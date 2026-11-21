@@ -18,9 +18,9 @@ class ZGApp extends Application.AppBase {
         hasComps = (Toybox has :Complications);
         jData = Application.Storage.getValue(jDataKey);
         if(jData==null) {
-            jData="Saturday";
-            publishComp();
+            jData="Sunday";
         }
+        publishComp();
     }
 
     //delete this?
@@ -55,7 +55,6 @@ class ZGApp extends Application.AppBase {
     }
 
     function publishComp() {
-        if(jData==null || !hasComps) {return;}
         System.println("publishComp "+jData);
         Complications.updateComplication(0, {:value => jData});
     } 

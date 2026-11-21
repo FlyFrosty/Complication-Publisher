@@ -17,7 +17,7 @@ class ZGBgView extends WatchUi.GlanceView {
     }
     
     function onUpdate(dc) {
-        jData = "Sunday";
+        jData = "Wednesday";
 
 		Application.Storage.setValue(jDataKey,jData);		
 

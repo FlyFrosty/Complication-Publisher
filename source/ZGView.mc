@@ -18,7 +18,7 @@ class ZGView extends WatchUi.View {
 
     // Update the view
     function onUpdate(dc as Dc) as Void {
-        jData = "Firday";
+        jData = "Monday";
         dc.drawText(dc.getWidth() / 2, dc.getHeight() * 0.75, Graphics.FONT_SYSTEM_TINY, jData, Graphics.TEXT_JUSTIFY_CENTER);
         View.onUpdate(dc);
     }
