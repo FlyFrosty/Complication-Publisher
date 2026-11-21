@@ -1,0 +1,30 @@
+import Toybox.Graphics;
+import Toybox.WatchUi;
+import Toybox.Time.Gregorian;
+
+class ZGView extends WatchUi.View {
+
+    function initialize() {
+        View.initialize();
+    }
+
+    // Delete this?
+    function onLayout(dc as Dc) as Void {
+    }
+
+    // Delete this?
+    function onShow() as Void {
+    }
+
+    // Update the view
+    function onUpdate(dc as Dc) as Void {
+        jData = "Firday";
+        dc.drawText(dc.getWidth() / 2, dc.getHeight() * 0.75, Graphics.FONT_SYSTEM_TINY, jData, Graphics.TEXT_JUSTIFY_CENTER);
+        View.onUpdate(dc);
+    }
+
+    // Delete this?
+    function onHide() as Void {
+    }
+
+}
