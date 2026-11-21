@@ -5,7 +5,6 @@ import Toybox.Background;
 
 var jData;
 var jDataKey="jDataKey";
-var jDayDisp;
 var inBackground=false;
 var wasTemporal=false;
 var hasComps;
@@ -19,7 +18,7 @@ class ZGApp extends Application.AppBase {
         hasComps = (Toybox has :Complications);
         jData = Application.Storage.getValue(jDataKey);
         if(jData==null) {
-            jData="26 000";
+            jData="Saturday";
             publishComp();
         }
     }

@@ -6,7 +6,7 @@ import Toybox.Time.Gregorian;
 
 (:glance)
 class ZGBgView extends WatchUi.GlanceView {
-	var fontTitle=Graphics.FONT_GLANCE;
+	var fontTitle=Graphics.FONT_GLANCE_NUMBER;
 	var fontData=Graphics.FONT_GLANCE_NUMBER;
 	
     function initialize() {
