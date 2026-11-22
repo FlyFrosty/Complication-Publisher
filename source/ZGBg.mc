@@ -1,6 +1,7 @@
 import Toybox.Background;
 import Toybox.System;
 import Toybox.Time.Gregorian;
+import Toybox.Complications;
 
 
 (:background)
@@ -13,8 +14,7 @@ class ZGServiceDelegate extends ServiceDelegate {
     function onTemporalEvent() {
         wasTemporal = true;
   		jData = "Tuesday";
-
-		Application.Storage.setValue(jDataKey,jData);
+		
         Background.exit(jData);
     }
 }

@@ -6,27 +6,30 @@ import Toybox.Time.Gregorian;
 
 (:glance)
 class ZGBgView extends WatchUi.GlanceView {
-	var fontTitle=Graphics.FONT_GLANCE_NUMBER;
-	var fontData=Graphics.FONT_GLANCE_NUMBER;
 	
     function initialize() {
         GlanceView.initialize();       
     }
     
     function onLayout(dc) {
-    }
-    
-    function onUpdate(dc) {
-        jData = "Wednesday";
-
-		Application.Storage.setValue(jDataKey,jData);		
+		var myWidth = dc.getWidth();
+		var myHeight = dc.getHeight();
 
 		dc.setColor(Graphics.COLOR_BLACK,Graphics.COLOR_BLACK);
 		dc.clear();
-		dc.setColor(Graphics.COLOR_WHITE,Graphics.COLOR_TRANSPARENT);
+		dc.setColor(Graphics.COLOR_BLUE,Graphics.COLOR_TRANSPARENT);
+		dc.drawText((myWidth / 2), (myHeight / 2), Graphics.FONT_GLANCE_NUMBER, jData, Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER);
+    }
+    
+    function onUpdate(dc) {
+        jData = "Wednesday";		
+
+		dc.setColor(Graphics.COLOR_BLACK,Graphics.COLOR_BLACK);
+		dc.clear();
+		dc.setColor(Graphics.COLOR_BLUE,Graphics.COLOR_TRANSPARENT);
 
 		var myWidth = dc.getWidth();
 		var myHeight = dc.getHeight();
-		dc.drawText((myWidth / 2), (myHeight / 2), fontTitle, "jData = "+jData,Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER);
+		dc.drawText((myWidth / 2), (myHeight / 2), Graphics.FONT_GLANCE_NUMBER, jData, Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER);
     }   
 }

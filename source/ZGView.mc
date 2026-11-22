@@ -18,9 +18,13 @@ class ZGView extends WatchUi.View {
 
     // Update the view
     function onUpdate(dc as Dc) as Void {
+
+        dc.setColor(Graphics.COLOR_BLACK,Graphics.COLOR_BLACK);
+        dc.clear();
+        dc.setColor(Graphics.COLOR_BLUE,Graphics.COLOR_TRANSPARENT);
+
         jData = "Monday";
         dc.drawText(dc.getWidth() / 2, dc.getHeight() * 0.75, Graphics.FONT_SYSTEM_TINY, jData, Graphics.TEXT_JUSTIFY_CENTER);
-        View.onUpdate(dc);
     }
 
     // Delete this?

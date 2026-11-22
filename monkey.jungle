@@ -1,1 +1,2 @@
 project.manifest = manifest.xml
+venu3.resourcePath= resources;resources-comp
